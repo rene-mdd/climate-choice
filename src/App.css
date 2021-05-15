@@ -1,38 +1,101 @@
-.App {
+/* @import url('https://fonts.googleapis.com/css?family=Abel'); */
+
+html,
+body {
+  background: #fceeb5;
+  font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 800px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+}
+
+.card h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: #343837;
+  overflow: hidden;
+  z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.additional-left {
+  position: absolute;
+  width: 650px;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+  z-index: 1;
+  right: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h5 {
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.description {
+  position: absolute;
+  top: 38%;
+  padding: 0px 10px;
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  background: #6B7C85;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-size: 8px;
+}
+
+footer > div {
+  width: 100%;
+}
+
+header {
+  padding: 10px;
+}
+
+div .additional :nth-child(3) {
+  position: absolute;
+    color: white;
+    bottom: 0;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#employee {
+  display: block;
+}
+
+ul {
+  position: absolute;
+  z-index: 5;
 }

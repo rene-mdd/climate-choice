@@ -1,11 +1,10 @@
-import "./App.css";
-import Companies from "./components/companies"
-
+import './App.css';
+import CompanyList from './components/companyList';
 
 function App() {
   return (
-    <div className="App">
-      <Companies />
+    <div>
+      <CompanyList />
     </div>
   );
 }
