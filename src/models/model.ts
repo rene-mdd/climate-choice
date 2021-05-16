@@ -26,8 +26,17 @@ export interface Api extends Companies {
 }
 
 export interface Contacts {
-    email: string;
-    image: string;
-    name: string;
-    phone: string;
+  email: string;
+  image: string;
+  name: string;
+  phone: string;
+}
+
+export interface PaginationProps {
+  companiesPerPage: number;
+  totalCompanies: number;
+  paginate: (arg: number) => void;
+  currentPage: number;
+  backPage: (arg: number) => void;
+  forwardPage: (arg: number) => void;
 }
