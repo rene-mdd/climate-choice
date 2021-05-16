@@ -6,4 +6,4 @@ First the server must be activated. In the root folder open terminal and type: c
 
 Open another terminal and run the project: npm start
 
-Technologies: React, Express, Node.
+Technologies: React, Express, TypeScript, Node.
