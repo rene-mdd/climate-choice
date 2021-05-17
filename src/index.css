@@ -19,7 +19,11 @@ body {
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  overflow: scroll;
+    overflow-x: hidden;
 }
+
+
 
 /* Sections
    ========================================================================== */
@@ -356,4 +360,15 @@ template {
 
 [hidden] {
   display: none;
+}
+
+/*Hide scroll bar*/
+
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
 }
