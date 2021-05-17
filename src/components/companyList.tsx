@@ -59,71 +59,71 @@ function CompanyList(): ReactElement {
       <div className={`${loading ? 'spinner' : ''}`} />
       {getCompanies
         ? currentCompanies.map((element: Companies, index: number) => {
-            const contacts: Contacts[] = [...element.contact_persons];
-            return (
-              <div className="card" key={element.id}>
-                <div className="left-container">
-                  <div className="level">
-                    <img
-                      src={`https://picsum.photos/200/300?random=${index}`}
-                      alt="logo"
-                      width="50"
-                      height="50"
-                    />
-                  </div>
-                  <div>
-                    <h5>{element.name}</h5>
-                  </div>
-                  <div>
-                    <p>Amount of employees</p>
-                    <p>{element.employee_count}</p>
-                  </div>
+          const contacts: Contacts[] = [...element.contact_persons];
+          return (
+            <div className="card" key={element.id}>
+              <div className="left-container">
+                <div className="level">
+                  <img
+                    src={`https://picsum.photos/200/300?random=${index}`}
+                    alt="logo"
+                    width="50"
+                    height="50"
+                  />
                 </div>
-                <div className="right-container">
-                  <header>
-                    <h3>
-                      {element.country}, {element.city}.
-                    </h3>
-                  </header>
-                  <div className="description">
-                    <p>{element.description}</p>
-                  </div>
-                  <footer>
-                    <div>
-                      <p>Email: {element.email}</p>
-                      <p>Phone: {element.phone}</p>
-                      <p>
-                        Address: {element.street}, {element.zip_code}.
-                      </p>
-                      <p>Website: {element.website}</p>
-                    </div>
-                    <div>
-                      <div className="contact">
-                        {contacts.map(
-                          ({ name, email, image, phone }: Contacts) => (
-                            <>
-                              <div key={`${phone}`}>
-                                <p>{name}</p>
-                                <p>{email}</p>
-                                <p>{phone}</p>
-                              </div>
-                              <img
-                                src="https://i.pravatar.cc/25"
-                                alt="contact"
-                              />
-                            </>
-                          )
-                        )}
-                      </div>
-                    </div>
-                  </footer>
+                <div>
+                  <h5>{element.name}</h5>
+                </div>
+                <div>
+                  <p>Amount of employees</p>
+                  <p>{element.employee_count}</p>
                 </div>
               </div>
-            );
-          })
+              <div className="right-container">
+                <header>
+                  <h3>
+                    {element.country}, {element.city}.
+                    </h3>
+                </header>
+                <div className="description">
+                  <p>{element.description}</p>
+                </div>
+                <footer>
+                  <div>
+                    <p>Email: {element.email}</p>
+                    <p>Phone: {element.phone}</p>
+                    <p>
+                      Address: {element.street}, {element.zip_code}.
+                      </p>
+                    <p>Website: {element.website}</p>
+                  </div>
+                  <div>
+                    <div className="contact">
+                      {contacts.map(
+                        ({ name, email, image, phone }: Contacts) => (
+                          <>
+                            <div key={`${phone}`}>
+                              <p>{name}</p>
+                              <p>{email}</p>
+                              <p>{phone}</p>
+                            </div>
+                            <img
+                              src="https://i.pravatar.cc/25"
+                              alt="contact"
+                            />
+                          </>
+                        )
+                      )}
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+          );
+        })
         : null}
 
-        { getCompanies ? <Pagination
+      { getCompanies ? <Pagination
         companiesPerPage={companiesPerPage}
         totalCompanies={companies.length}
         paginate={paginate}

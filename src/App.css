@@ -117,14 +117,19 @@ div .left-container :nth-child(3) {
   margin-bottom: 10px;
 }
 
+.left-container .level img {
+  border-radius: 5px;
+}
+
 .contact div {
   margin: 0px 5px;
 }
 
-.contact div img {
+footer .contact img {
   width: 25px;
   height: 25px;
-  margin: 5px 10px;
+  margin: 5px;
+  border-radius: 50%;
 }
 
 .right-container .description > p {
@@ -182,7 +187,7 @@ div .main-header {
 
 .pagination-nav .back,
 .forward {
-  padding: 4px;
+  padding: 2px;
   color: white;
 }
 
@@ -210,14 +215,6 @@ div .main-header {
   background-color: #4054b2;
   color: white;
   cursor: pointer;
-}
-
-.pagination-nav .pagination li {
-  line-height: 0.5;
-  margin: 0 0px;
-  font-size: 1.3em;
-  border-radius: 100%;
-  background-color: #113293;
 }
 
 .pagination-nav {
