@@ -10,140 +10,6 @@
   margin-right: auto;
 }
 
-.level {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -10%);
-  transform: translate(-50%, -10%);
-}
-
-.center .card {
-  width: 83vw;
-  min-width: 300px;
-  height: 175px;
-  background-color: white;
-  box-shadow: 0 8px 16px -8px rgb(0 0 0 / 40%);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  margin: 15px 0;
-}
-
-.card h1 {
-  text-align: center;
-}
-
-.card .left-container {
-  position: absolute;
-  width: 22%;
-  height: 100%;
-  background: #4054b2;
-  overflow: hidden;
-  z-index: 2;
-}
-
-.right-container {
-  position: absolute;
-  width: 78%;
-  height: 100%;
-  background: white;
-  overflow: hidden;
-  z-index: 1;
-  right: 0;
-  color: #113293;
-}
-
-h5 {
-  text-align: center;
-  color: white;
-  padding: 0 5px;
-}
-
-p {
-  margin: 0;
-}
-
-div .description {
-  position: absolute;
-  padding: 0px 10px;
-  overflow: hidden;
-  height: 70px;
-  width: 100%;
-}
-
-.right-container footer {
-  display: flex;
-  position: absolute;
-  background: #6bd1bc;
-  bottom: 0;
-  width: 100%;
-  padding: 6px;
-  color: #113293;
-  font-size: 8px;
-  font-weight: bold;
-}
-
-.right-container footer > div:nth-child(1) {
-  width: 100%;
-}
-
-.right-container footer > div:nth-child(2) {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 15px;
-}
-
-div .contact {
-  display: flex;
-  align-items: center;
-  text-align: right;
-}
-
-.right-container header {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-}
-
-div .left-container :nth-child(3) {
-  position: absolute;
-  color: white;
-  bottom: 0;
-  font-size: 10px;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.left-container .level img {
-  border-radius: 5px;
-}
-
-.contact div {
-  margin: 0px 5px;
-}
-
-footer .contact img {
-  width: 25px;
-  height: 25px;
-  margin: 5px;
-  border-radius: 50%;
-}
-
-.right-container .description > p {
-  width: 100%;
-  height: 70px;
-  overflow-y: scroll;
-  font-size: 14px;
-}
-
-.right-container header h3 {
-  margin: 0;
-  font-size: small;
-}
-
 .main-header ul {
   list-style-type: none;
   margin: auto auto;
@@ -184,6 +50,146 @@ div .main-header {
   padding: 0px 10px;
   cursor: pointer;
 }
+
+.level {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+  transform: translate(-50%, -10%);
+}
+
+.center .card {
+  width: 83vw;
+  min-width: 300px;
+  height: 175px;
+  background-color: white;
+  box-shadow: 0 8px 16px -8px rgb(0 0 0 / 40%);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 15px 0;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .left-container {
+  position: absolute;
+  width: 22%;
+  height: 100%;
+  background: #4054b2;
+  overflow: hidden;
+  z-index: 2;
+}
+
+div .left-container :nth-child(3) {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  font-size: 10px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.left-container .level img {
+  border-radius: 5px;
+}
+
+.right-container {
+  position: absolute;
+  width: 78%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+  z-index: 1;
+  right: 0;
+  color: #113293;
+}
+
+
+.right-container .description > p {
+  width: 94%;
+  height: 70px;
+  font-size: 14px;
+  overflow: scroll;
+}
+
+.right-container header h3 {
+  margin: 0;
+  font-size: small;
+}
+
+
+
+div .description {
+  position: absolute;
+  padding: 0px 10px;
+  height: 70px;
+  width: 100%;
+}
+
+.right-container footer {
+  display: flex;
+  position: absolute;
+  background: #6bd1bc;
+  bottom: 0;
+  width: 100%;
+  padding: 6px;
+  color: #113293;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.right-container footer > div:nth-child(1) {
+  width: 100%;
+}
+
+.right-container footer > div:nth-child(2) {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 15px;
+}
+
+.right-container header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+div .contact {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+
+
+.contact div {
+  margin: 0px 5px;
+}
+
+footer .contact img {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+h5 {
+  text-align: center;
+  color: white;
+  padding: 0 5px;
+}
+
+p {
+  margin: 0;
+}
+
+
 
 .pagination-nav .back,
 .forward {
