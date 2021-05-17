@@ -1,6 +1,6 @@
-# Climate Choice coding challenge
+## Climate Choice coding challenge
 
-## Run de project
+####  To run de project
 
 First the server must be activated to overcome CORS. In the root folder open terminal and type: cd express-server && npm i && node server.js
 
