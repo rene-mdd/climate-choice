@@ -10,7 +10,7 @@ function CompanyList(): ReactElement {
   const [loading, setLoading] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [companiesPerPage] = useState(10);
-  const [getCompanies, setCompanies] = useState(false);
+  const [getCompanies, setCompanies] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,7 +61,7 @@ function CompanyList(): ReactElement {
         ? currentCompanies.map((element: Companies, index: number) => {
           const contacts: Contacts[] = [...element.contact_persons];
           return (
-            <div className="card" key={element.id}>
+            <div className="card" key={`${element.slug} - ${element.id}`}>
               <div className="left-container">
                 <div className="level">
                   <img
@@ -101,17 +101,19 @@ function CompanyList(): ReactElement {
                     <div className="contact">
                       {contacts.map(
                         ({ name, email, image, phone }: Contacts) => (
-                          <>
-                            <div key={`${phone}`}>
+                          <div key={`${phone}`} className='contact-div'>
+                            <div>
                               <p>{name}</p>
                               <p>{email}</p>
                               <p>{phone}</p>
                             </div>
+                            <div>
                             <img
                               src="https://i.pravatar.cc/25"
                               alt="contact"
                             />
-                          </>
+                            </div>
+                          </div>
                         )
                       )}
                     </div>
@@ -123,7 +125,7 @@ function CompanyList(): ReactElement {
         })
         : null}
 
-      { getCompanies ? <Pagination
+      { (getCompanies && !loading) ? <Pagination
         companiesPerPage={companiesPerPage}
         totalCompanies={companies.length}
         paginate={paginate}

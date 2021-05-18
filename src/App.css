@@ -109,7 +109,6 @@ div .left-container :nth-child(3) {
   color: #113293;
 }
 
-
 .right-container .description > p {
   width: 94%;
   height: 70px;
@@ -121,8 +120,6 @@ div .left-container :nth-child(3) {
   margin: 0;
   font-size: small;
 }
-
-
 
 div .description {
   position: absolute;
@@ -166,10 +163,13 @@ div .contact {
   text-align: right;
 }
 
+.contact .contact-div {
+  display: flex;
+}
 
-
-.contact div {
-  margin: 0px 5px;
+.contact-div div:nth-child(1) {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 footer .contact img {
@@ -188,8 +188,6 @@ h5 {
 p {
   margin: 0;
 }
-
-
 
 .pagination-nav .back,
 .forward {
